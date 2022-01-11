@@ -1,0 +1,19 @@
+﻿.name{
+    font-family:'Edwardian Script ITC'; /*additional formatting for h1 (my name)*/
+    text-align:center;
+    font-weight:500;
+    font-size:50px;
+}
+
+h1{
+    font-size:80px;
+    text-align:center;
+}
+
+
+.label { /*additional formatting for the grade calculator label*/
+    font-size: calc(1.3rem + 0.6vw);
+    text-align:center;
+    font-weight:500;
+}
+

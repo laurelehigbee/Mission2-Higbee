@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Mission2_Higbee.views.views
+{
+    public class index
+    {
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>About Me</title> <!--Webpage title-->
+    <link rel="icon" type="image/x-icon" href="img/mouseEars.png" /> <!--sets up the webpage icon photo-->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> <!--Allows access to the Bootstrap stylesheet-->
+    <link href="css/myStyles.css" rel="stylesheet" /><!--Allows access to the myStyles stylesheet-->
+</head>
+<body>
+    <h1>About Me and My Goals</h1><br /><!--Title-->
+    <h1 class="name">Laurel Higbee</h1><!--Header-->
+
+    <center><img src="img/IMG_20190227_192235199.jpg" height="360" width="310"><br /></center><!--Image-->
+    <figcaption style="text-align:center">I love to visit Disneyland.</figcaption><br /><!--Image caption-->
+
+    <div class="container">
+        <!--container for the goals and job sections-->
+        <div class="row align-items-start">
+            <div class="col">
+                <!--organizes the 'goals' section into a column-->
+                <h2 style="text-align:center">My IS 413 Goals</h2> <!--goals section header-->
+                <p>
+                    I hope to become more confident while working in ASP.net and improve my ability to communicate
+                    effectively about the topics we discuss. I would also like to gain and maintain appropriate time management skills, and
+                    create a pool of resources that I can draw from when I have a question about something we are learning, or that I would like
+                    to discover for myself. <!--paragraph about my goals-->
+                </p>
+            </div>
+            <div class="col">
+                <!--organizes the 'jobs section into another column'-->
+                <h2 style="text-align:center">Top 3 Jobs I Want to Seek</h2><!--job section header-->
+                <ol style="text-align: center; list-style-position: inside;">
+                    <!--creates an ordered list-->
+                    <li>Business Intelligence Analyst</li>
+                    <li>Software Developer</li>
+                    <li>Data Analyst</li>
+                </ol>
+            </div>
+        </div><br /><br />
+    </div>
+    <div class='container'>
+        <!--creates class for the grade calculator-->
+        <label class="label" for="calcform">Grade Calculator:</label><!--grade calculator label-->
+        <p>Please enter the expected percentage in each section without the percentage sign.</p><!--instructions-->
+        <form class="row gy-2 gx-3 align-items-center">
+            <!--creates form for calculating the final grade-->
+            <div class="col-auto">
+                <!--creates column for the assignments, group project, and quizzes inputs-->
+                <label for="assignments">Assignments:</label>
+                <input type="text" class="form-control" id="assignments"><br />
+
+                <label for="group">Group Project:</label>
+                <input type="text" class="form-control" id="group"><br />
+
+                <label for="quizzes">Quizzes:</label>
+                <input type="text" class="form-control" id="quizzes"><br />
+            </div>
+            <div class="col-auto">
+                <!--creates column for the exams and INTEX inputs, submit button, as well as the final grade output-->
+                <label for="exams">Exams:</label>
+                <input type="text" class="form-control" id="exams"><br />
+
+                <label for="intex">INTEX:</label>
+                <input type="text" class="form-control" id="intex"><br />
+
+                <label style="font-weight:bold" for='final'>Final Grade:</label>
+                <p id="final"></p><!--paragraph that will display the output from the js calculation-->
+            </div>
+            <div>
+                <button id="calculate" type="button" class="btn btn-primary">Submit</button>
+                <!--button that sends request to calculate
+                       the final grade-->
+            </div>
+        </form>
+    </div>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script><!--Allows access to the Bootstrap js files-->
+    <script src="lib/jQuery/jquery-3.6.0.min.js"></script><!--Allows access to the jQuery files-->
+    <script src="js/gradeCalculator.js"></script><!--Allows access to the grade calculator js file-->
+</body>
+</html>

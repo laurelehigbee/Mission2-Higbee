@@ -40,8 +40,8 @@
 
     else { iLetter = "E" } /*if the calculated grade is less than 60 */
 
-    $("#final").html(iLetter + " " + iGrade+"%") /* prints final output of the letter grade, and grade percentage */
-})
+    ($("#final").html(iLetter + " " + iGrade+"%") /* prints final output of the letter grade, and grade percentage */
+)})
 
 
 

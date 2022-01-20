@@ -13,14 +13,15 @@
 
 <body>
 
-    <nav> <!--Navigation bar-->
+    <nav>
+        <!--Navigation bar-->
         <a asp-controller="More" asp-action="Index">Home</a> <!--Homepage navigation link-->
         <a asp-controller="More" asp-action="GradeCalculator">Grade Calculator</a> <!--Grade calculator navigation link-->
     </nav>
 
     <div>
-        <script src="~/js/gradeCalculator.js"></script><!--Allows access to the grade calculator js file-->
-
+        <script src="~/lib/bootstrap/js/bootstrap.min.js"></script><!--Allows access to the Bootstrap js files-->
+        <script src="~/lib/jQuery/jquery-3.6.0.min.js"></script><!--Allows access to the jQuery files-->
         <h1>@ViewData["Header1"]</h1><!--Gets the header information from the layout-->
         @RenderBody()<!--Renders the body for the specific view-->
     </div>

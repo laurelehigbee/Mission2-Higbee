@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="img/mouseEars.png" /> <!--sets up the webpage icon photo-->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> <!--Allows access to the Bootstrap stylesheet-->
+    <link href="css/myStyles.css" rel="stylesheet" /><!--Allows access to the myStyles stylesheet-->
+</head>
+<body>
+    <nav>
+        <a asp-controller="More" asp-action="Index">Home</a>
+        <a asp-controller="More" asp-action="GradeCalculator">Grade Calculator</a>
+    </nav>
+    <div>
+        <h1>@ViewData["Header1"]</h1>
+        @RenderBody()
+    </div>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script><!--Allows access to the Bootstrap js files-->
+    <script src="lib/jQuery/jquery-3.6.0.min.js"></script><!--Allows access to the jQuery files-->
+</body>
+</html>

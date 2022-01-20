@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    @{
+        ViewData["Title"] = "About Me";
+    } <!--Webpage title-->
+
+</head>
+<body>
+    @{ 
+        ViewData["Header1"] = "About Me and My Goals";
+    }<!--Specific Page Title-->
+    <br />
+    <h1 class="name">Laurel Higbee</h1><!--Header-->
+
+    <center><img src="img/IMG_20190227_192235199.jpg" height="360" width="310"><br /></center><!--Image-->
+    <figcaption style="text-align:center">I love to visit Disneyland.</figcaption><br /><!--Image caption-->
+
+    <div class="container">
+        <!--container for the goals and job sections-->
+        <div class="row align-items-start">
+            <div class="col">
+                <!--organizes the 'goals' section into a column-->
+                <h2 style="text-align:center">My IS 413 Goals</h2> <!--goals section header-->
+                <p>
+                    I hope to become more confident while working in ASP.net and improve my ability to communicate
+                    effectively about the topics we discuss. I would also like to gain and maintain appropriate time management skills, and
+                    create a pool of resources that I can draw from when I have a question about something we are learning, or that I would like
+                    to discover for myself. <!--paragraph about my goals-->
+                </p>
+            </div>
+            <div class="col">
+                <!--organizes the 'jobs section into another column'-->
+                <h2 style="text-align:center">Top 3 Jobs I Want to Seek</h2><!--job section header-->
+                <ol style="text-align: center; list-style-position: inside;">
+                    <!--creates an ordered list-->
+                    <li>Business Intelligence Analyst</li>
+                    <li>Software Developer</li>
+                    <li>Data Analyst</li>
+                </ol>
+            </div>
+        </div><br /><br />
+    </div>
+
+</body>
+</html>

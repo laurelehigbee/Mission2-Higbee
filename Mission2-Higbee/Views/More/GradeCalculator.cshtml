@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model GradeCalculator
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    @{
+        ViewData["Title"] = "About Me";
+    } <!--Webpage title-->
+
+</head>
+<body>
+    @{
+        ViewData["Header1"] = "Grade Calculator";
+    }<!--Specific Page Title-->
+
+    <div class='container'>
+        <!--creates class for the grade calculator-->
+        <p>Please enter the expected percentage in each section without the percentage sign.</p><!--instructions-->
+        <form method="post" class="row gy-2 gx-3 align-items-center">
+            <!--creates form for calculating the final grade-->
+            <div class="col-auto">
+                <!--creates column for the assignments, group project, and quizzes inputs-->
+                <label for="assignments">Assignments:</label>
+                <input asp-for="Assignments" type="text" class="form-control" id="assignments"><br />
+
+                <label for="group">Group Project:</label>
+                <input asp-for="Group" type="text" class="form-control" id="group"><br />
+
+                <label for="quizzes">Quizzes:</label>
+                <input asp-for="Quizzes" type="text" class="form-control" id="quizzes"><br />
+            </div>
+            <div class="col-auto">
+                <!--creates column for the exams and INTEX inputs, submit button, as well as the final grade output-->
+                <label for="exams">Exams:</label>
+                <input asp-for="Exams" type="text" class="form-control" id="exams"><br />
+
+                <label for="intex">INTEX:</label>
+                <input asp-for="Intex" type="text" class="form-control" id="intex"><br />
+
+                <label style="font-weight:bold" for='final'>Final Grade:</label>
+                <p id="final"></p><!--paragraph that will display the output from the js calculation-->
+            </div>
+            <div>
+                <button id="calculate" type="submit" class="btn btn-primary">Submit</button>
+                <!--button that sends request to calculate
+                       the final grade-->
+            </div>
+        </form>
+        <div asp-validation-summary="All"></div>
+    </div>
+</body>
+</html>
+<script src="js/gradeCalculator.js"></script><!--Allows access to the grade calculator js file-->
